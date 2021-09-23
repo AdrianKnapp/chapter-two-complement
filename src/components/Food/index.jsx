@@ -7,22 +7,16 @@ import api from '../../services/api';
 function Food(props) {
   const [isAvailable, setIsAvailable] = useState(true); 
 
-  const { available } = props.food;
-  const state = {
-    isAvailable: available
-  };
-
-
   async function toggleAvailable() {
     const { food } = props;
-    const { isAvailable } = state;
-
+    
+    console.log(food.id);
     await api.put(`/foods/${food.id}`, {
       ...food,
       available: !isAvailable,
     });
-
-    setIsAvailable({ isAvailable: !isAvailable });
+    console.log(!isAvailable);
+    setIsAvailable(!isAvailable);
   }
 
   function setEditingFood() {
