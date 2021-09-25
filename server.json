@@ -19,8 +19,8 @@
     {
       "image": "link",
       "name": "Comida",
-      "price": "200",
-      "description": "Desc",
+      "price": "250",
+      "description": "Descrição",
       "available": true,
       "id": 3
     }
