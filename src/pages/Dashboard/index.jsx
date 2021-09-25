@@ -73,8 +73,10 @@ function Dashboard(props) {
     const { modalOpen } = state;
     setState(
       {
+        ...state,
         modalOpen: !modalOpen 
       });
+      
   }
 
   const toggleEditModal = () => {
