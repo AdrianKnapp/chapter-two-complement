@@ -12,7 +12,7 @@ function ModalEditFood(props) {
     const { setIsOpen, handleUpdateFood } = props;
 
     handleUpdateFood(data);
-    setIsOpen();
+    setIsOpen(false);
   };
 
   const { isOpen, setIsOpen, editingFood } = props;

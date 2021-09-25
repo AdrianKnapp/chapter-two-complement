@@ -18,7 +18,12 @@ function Dashboard(props) {
   useEffect(() => {
     (async function loadFoods() {
       const response = await api.get('/foods');
-      setState({ foods: response.data });
+      setState({
+        foods: [...response.data],
+        editingFood: {},
+        modalOpen: false,
+        editModalOpen: false,
+      });
     })();
   }, []);
 
@@ -45,11 +50,9 @@ function Dashboard(props) {
         `/foods/${editingFood.id}`,
         { ...editingFood, ...food },
       );
-
       const foodsUpdated = foods.map(f =>
         f.id !== foodUpdated.data.id ? f : foodUpdated.data,
       );
-
       setState({ foods: foodsUpdated });
     } catch (err) {
       console.log(err);
@@ -68,18 +71,27 @@ function Dashboard(props) {
 
   const toggleModal = () => {
     const { modalOpen } = state;
-
-    setState({ modalOpen: !modalOpen });
+    setState(
+      {
+        modalOpen: !modalOpen 
+      });
   }
 
   const toggleEditModal = () => {
     const { editModalOpen } = state;
-
-    setState({ editModalOpen: !editModalOpen });
+    setState(
+      { 
+        ...state,
+        editModalOpen: !editModalOpen 
+      });
   }
-
+  
   const handleEditFood = food => {
-    setState({ editingFood: food, editModalOpen: true });
+    setState({
+      foods: state.foods,
+      editingFood: food,
+      editModalOpen: true,
+    })
   }
 
   const { modalOpen, editModalOpen, editingFood, foods } = state;

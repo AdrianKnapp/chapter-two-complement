@@ -1,12 +1,12 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { FiEdit3, FiTrash } from 'react-icons/fi';
 
 import { Container } from './styles';
 import api from '../../services/api';
 
 function Food(props) {
-  const [isAvailable, setIsAvailable] = useState(true); 
   const { food, handleDelete } = props;
+  const [isAvailable, setIsAvailable] = useState(food.available); 
 
   async function toggleAvailable() {
     try {
@@ -20,14 +20,6 @@ function Food(props) {
     }
     
   }
-
-  useEffect(() => {
-    async function getAvailable() {
-    const response = await api.get(`/foods/${food.id}`);
-    setIsAvailable(response.data.available);
-  }
-  getAvailable();
-  }, [food.id]);
 
   function setEditingFood() {
     const { food, handleEditFood } = props;

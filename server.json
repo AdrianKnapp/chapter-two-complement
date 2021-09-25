@@ -5,7 +5,7 @@
       "name": "Nome da comida",
       "price": "300",
       "description": "Comida",
-      "available": true,
+      "available": false,
       "id": 1
     },
     {
