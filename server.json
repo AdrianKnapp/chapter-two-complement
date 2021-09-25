@@ -2,9 +2,9 @@
   "foods": [
     {
       "image": "",
-      "name": "",
-      "price": "",
-      "description": "",
+      "name": "Nome da comida",
+      "price": "300",
+      "description": "Comida",
       "available": false,
       "id": 1
     },
