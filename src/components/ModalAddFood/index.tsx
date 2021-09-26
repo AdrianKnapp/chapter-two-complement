@@ -9,13 +9,15 @@ import Input from '../Input';
 interface ModalAddFoodProps {
   isOpen: boolean;
   setIsOpen: () => void;
-  handleAddFood: (data: object) => void;
+  handleAddFood: (data: DataProps) => void;
 }
 
 interface DataProps {
+  id: number;
   name: string;
   description: string;
   price: number;
+  available: boolean;
   image_url: string;
 }
 

@@ -16,7 +16,7 @@ interface FoodItemProps {
   description: string;
   price: number;
   available: boolean;
-  image: string;
+  image_url: string;
 }
 
 function Food(props: FoodProps) {
@@ -45,7 +45,7 @@ function Food(props: FoodProps) {
   return (
     <Container available={isAvailable}>
       <header>
-        <img src={food.image} alt={food.name} />
+        <img src={food.image_url} alt={food.name} />
       </header>
       <section className="body">
         <h2>{food.name}</h2>

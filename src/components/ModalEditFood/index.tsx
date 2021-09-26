@@ -10,13 +10,14 @@ interface ModalEditFoodProps {
   isOpen: boolean;
   setIsOpen: () => void;
   editingFood: Food;
-  handleUpdateFood: (data: object) => void;
+  handleUpdateFood: (data: Food) => void;
 }
 
 interface Food {
   id: number;
   name: string;
   description: string;
+  available: boolean;
   price: number;
   image_url: string;
 }
