@@ -15,6 +15,54 @@
       "description": "Descrição",
       "available": true,
       "id": 3
+    },
+    {
+      "image": "Comida",
+      "name": "Moda Italiana",
+      "price": "300",
+      "description": "Comidinhaaa",
+      "available": true,
+      "id": 4
+    },
+    {
+      "image": "",
+      "name": "",
+      "price": "",
+      "description": "",
+      "available": true,
+      "id": 5
+    },
+    {
+      "image": "",
+      "name": "",
+      "price": "",
+      "description": "",
+      "available": true,
+      "id": 6
+    },
+    {
+      "image": "",
+      "name": "",
+      "price": "",
+      "description": "",
+      "available": true,
+      "id": 7
+    },
+    {
+      "image": "",
+      "name": "",
+      "price": "",
+      "description": "",
+      "available": true,
+      "id": 8
+    },
+    {
+      "image": "",
+      "name": "",
+      "price": "",
+      "description": "",
+      "available": true,
+      "id": 9
     }
   ]
 }

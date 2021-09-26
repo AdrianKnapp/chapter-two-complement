@@ -45,11 +45,10 @@ function Dashboard() {
         ...prevState,
         foods: [...response.data],
         modalOpen: false,
-        editModalOpen: false,
       }));
     })();
   }, []);
-
+  
   const handleAddFood = async (food: FoodProps) => {
     const { foods } = state;
 
@@ -62,7 +61,8 @@ function Dashboard() {
       setState(
         { 
           ...state,
-          foods: [...foods, response.data] 
+          foods: [...foods, response.data],
+          modalOpen: !modalOpen 
         });
     } catch (err) {
       console.log(err);
@@ -83,7 +83,9 @@ function Dashboard() {
       setState(
         { 
           ...state,
-          foods: foodsUpdated 
+          foods: foodsUpdated,
+          modalOpen: !modalOpen,
+          editModalOpen: !editModalOpen,
         });
     } catch (err) {
       console.log(err);
@@ -100,7 +102,8 @@ function Dashboard() {
     setState(
       { 
         ...state,
-        foods: foodsFiltered 
+        foods: foodsFiltered,
+        modalOpen: !modalOpen 
       });
   }
 
@@ -109,7 +112,7 @@ function Dashboard() {
     setState(
       {
         ...state,
-        modalOpen: !modalOpen 
+        modalOpen: !modalOpen
       });
       
   }
@@ -119,7 +122,8 @@ function Dashboard() {
     setState(
       { 
         ...state,
-        editModalOpen: !editModalOpen 
+        editModalOpen: !editModalOpen, 
+        modalOpen: !modalOpen 
       });
   }
   
@@ -129,6 +133,7 @@ function Dashboard() {
       foods: state.foods,
       editingFood: food,
       editModalOpen: true,
+      modalOpen: !modalOpen
     })
   }
 
@@ -142,6 +147,7 @@ function Dashboard() {
         setIsOpen={toggleModal}
         handleAddFood={handleAddFood}
       />
+      {console.log(state)}
       <ModalEditFood
         isOpen={editModalOpen}
         setIsOpen={toggleEditModal}
