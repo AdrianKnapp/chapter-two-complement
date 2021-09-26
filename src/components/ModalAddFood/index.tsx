@@ -18,7 +18,7 @@ interface DataProps {
   description: string;
   price: number;
   available: boolean;
-  image_url: string;
+  image: string;
 }
 
 function ModalAddFood(props: ModalAddFoodProps) {

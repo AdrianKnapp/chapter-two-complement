@@ -19,7 +19,7 @@ interface Food {
   description: string;
   available: boolean;
   price: number;
-  image_url: string;
+  image: string;
 }
 
 function ModalEditFood(props: ModalEditFoodProps) {

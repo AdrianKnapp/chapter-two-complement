@@ -20,7 +20,7 @@ interface FoodProps {
   description: string;
   price: number;
   available: boolean;
-  image_url: string;
+  image: string;
 }
 
 function Dashboard() {
@@ -34,7 +34,7 @@ function Dashboard() {
         description: '',
         price: 0,
         available: false,
-        image_url: '',
+        image: '',
       },
     });
 
@@ -103,7 +103,6 @@ function Dashboard() {
       { 
         ...state,
         foods: foodsFiltered,
-        modalOpen: !modalOpen 
       });
   }
 
@@ -147,7 +146,6 @@ function Dashboard() {
         setIsOpen={toggleModal}
         handleAddFood={handleAddFood}
       />
-      {console.log(state)}
       <ModalEditFood
         isOpen={editModalOpen}
         setIsOpen={toggleEditModal}

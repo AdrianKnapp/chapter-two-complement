@@ -1,68 +1,28 @@
 {
   "foods": [
     {
-      "image": "",
-      "name": "Nome da comida",
-      "price": "300",
-      "description": "Comida",
+      "id": 1,
+      "name": "Ao molho",
+      "description": "Macarrão ao molho branco, fughi e cheiro verde das montanhas",
+      "price": "19.90",
+      "available": true,
+      "image": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food1.png"
+    },
+    {
+      "id": 2,
+      "name": "Veggie",
+      "description": "Macarrão com pimentão, ervilha e ervas finas colhidas no himalaia.",
+      "price": "21.90",
+      "available": true,
+      "image": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food2.png"
+    },
+    {
+      "id": 3,
+      "name": "A la Camarón",
+      "description": "Macarrão com vegetais de primeira linha e camarão dos 7 mares.",
+      "price": "25.90",
       "available": false,
-      "id": 1
-    },
-    {
-      "image": "link",
-      "name": "Comida",
-      "price": "250",
-      "description": "Descrição",
-      "available": true,
-      "id": 3
-    },
-    {
-      "image": "Comida",
-      "name": "Moda Italiana",
-      "price": "300",
-      "description": "Comidinhaaa",
-      "available": true,
-      "id": 4
-    },
-    {
-      "image": "",
-      "name": "",
-      "price": "",
-      "description": "",
-      "available": true,
-      "id": 5
-    },
-    {
-      "image": "",
-      "name": "",
-      "price": "",
-      "description": "",
-      "available": true,
-      "id": 6
-    },
-    {
-      "image": "",
-      "name": "",
-      "price": "",
-      "description": "",
-      "available": true,
-      "id": 7
-    },
-    {
-      "image": "",
-      "name": "",
-      "price": "",
-      "description": "",
-      "available": true,
-      "id": 8
-    },
-    {
-      "image": "",
-      "name": "",
-      "price": "",
-      "description": "",
-      "available": true,
-      "id": 9
+      "image": "https://storage.googleapis.com/golden-wind/bootcamp-gostack/desafio-food/food3.png"
     }
   ]
 }
