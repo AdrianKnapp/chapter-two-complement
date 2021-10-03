@@ -33,7 +33,6 @@ function Food(props: FoodProps) {
     } catch(err) {
       console.log(err);
     }
-    
   }
 
   function setEditingFood() {
